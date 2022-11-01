@@ -1,0 +1,55 @@
+{% extends 'main.html' %} {%load static%} {% block content %}
+<link rel="stylesheet" href="{% static 'css/searchPage.css' %}">
+
+<div class="firstLine">
+    <h1>Search For Student</h1>
+</div>
+<form action="{%url 'show'%}">
+    <fieldset>
+        <legend>Search By</legend>
+        <div class="nameDiv">
+         <!--  <input type="checkbox" name="chname" value="byName" id="byName">--> 
+            <label for="byName"><span>Name:</span></label>
+            <input type="text" name="searchname" placeholder="Name" id="namefield">
+
+        </div>
+
+        <div class="IDDiv">
+              <!-- <input type="checkbox" name="chid" value="byID" id="byID">-->
+            <label for="byID">ID:</label>
+            <input type="text" name="searchid" id="idfield" placeholder="id">
+
+        </div>
+
+
+        <div class="departDiv">
+        
+            <label for="departID">Department: </label>
+            <select name="Depart" id="departID" title="Department"> 
+                <option value="">all</option>
+            <option value="gen">General</option>
+            <option value="cs">CS</option>
+            <option value="is">IS</option>
+            <option value="it">IT</option>
+            <option value="ai">AI</option>
+        </select>
+        </div>
+   
+
+        <div>
+
+            <button id="">search</button>
+        </div>
+    </fieldset>
+</form>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<script src="{% static 'js/searchPage.js'%}"></script>
+
+{% endblock %}

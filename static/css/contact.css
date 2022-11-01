@@ -1,0 +1,28 @@
+.contact {
+    background-image: url("simple-background-backgrounds-passion-simple-1-5c9b95d09002a.png");
+    padding: 30px 
+    
+}
+h1 {
+    color: rgb(106, 68, 18)
+
+}
+h2 {
+    color:rgb(117, 93, 42)
+}
+div a {
+    color:rgb(53, 94, 18)
+}
+h3 {
+    color:rgb(53, 94, 18)
+}
+ul {
+    color:rgb(133, 153, 100)
+}
+a{
+    text-decoration: none
+    
+}
+a:hover {
+    color:rgb(72, 125, 150)
+}

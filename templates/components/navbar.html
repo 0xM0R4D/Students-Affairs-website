@@ -1,0 +1,35 @@
+{%load static%}
+<nav class="container-fluid">
+    <div class="logo">
+        <a href="{%url 'home'%}"><img src="{%static 'imgs/images.jpg' %}" alt="" style="max-width:3rem;"></a>
+    </div>
+    <div class="links">
+        <a href="{%url 'home'%}" onclick="click_nth_link(0)">Home</a>
+        <a href="{%url 'add'%}" onclick="click_nth_link(1)">Add new course/Student</a>
+        <a href="{%url 'search'%}" onclick="click_nth_link(2)">Search/Edit</a>
+        <a href="{%url 'active_inactive'%}" onclick="click_nth_link(3)">activate students</a>
+        <!--<a href="{%url 'edit' stu_id=20200304%}">Edit</a>-->
+        <a href="{%url 'contact'%}" onclick="click_nth_link(4)">contact us</a>
+        <a href="{%url 'news'%}" onclick="click_nth_link(5)">News</a>
+    </div>
+</nav>
+
+<script>
+    function click_nth_link(i) {
+        var url = nav.children[i].getAttribute('href');
+        var xml = new XMLHttpRequest();
+        xml.onreadystatechange = function() {
+            if (xml.readyState === xml.DONE) {
+                console.log("DONE TO REACH: " + url);
+            }
+        }
+        xml.open('GET', url, true);
+        xml.send();
+    }
+    var nav = document.getElementsByClassName('links')[0];
+    /*
+    for (var i = 0; i < 6; i++) {
+        nav.children[i].onclick = click_nth_link(i);
+    }
+    */
+</script>

@@ -1,0 +1,52 @@
+.par {
+    padding: 25px;
+    max-width: 1170px;
+    font-size: 25px;
+    background-color: grey;
+    line-height: 1.5;
+    border-left: 8px solid black;
+    margin: 20px auto 0 auto;
+    overflow: hidden;
+    position: relative;
+    height: 100px;
+}
+
+#par_container {
+    margin: 0 auto 0 auto;
+    color: white;
+}
+
+.read-more {
+    position: absolute;
+    left: 95%;
+    top: 80%;
+    font-size: 12px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0 10px 10px 0;
+    transition-duration: 0.3s;
+}
+
+
+
+
+
+.Logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:60px;
+}
+.Logo div:hover{
+    transform: translateY(-20px) translateX(-10px);
+    
+    transition-duration: 0.3s;
+    box-shadow: 20px 30px 10px 0px gray;
+}
+.Logo div{
+    transition-duration: 0.3s;
+}
+
+
+

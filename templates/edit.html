@@ -1,0 +1,57 @@
+{% extends 'main.html' %} {%load static%} {% block content %}
+
+
+<div>
+    <form action="{%url 'show'%}">
+        <label>Search For Student</label>
+        <br><br>
+        <input type="submit">
+        <br><br>
+        <input type="search" placeholder="search by student id " id="inputId" name="searchid">
+    </form>
+</div>
+
+
+<a href="{%url '_edit' stu_id=stu.stu_id%}" class="edit">Update</a>
+
+<div style="display:flex;justify-content:center;width:100%;flex-wrap:wrap;">
+    <div class="stu-data" id="" style="width:40% ;">
+
+        <p>Name: {{stu.stu_name}}</p>
+        <p>ID: {{stu.stu_id}}</p>
+        <p>Level: {{stu.level}}</p>
+        <p>Dep: {{stu.stu_dep}}</p>
+        <p>GPA: {{stu.GPA}}</p>
+        <p>Active: {{stu.isActive}}</p>
+
+    </div>
+
+</div>
+
+
+
+</body>
+
+<script src="{%static 'js/edit.js'%}">
+</script>
+
+<style>
+    .edit {
+        padding: 10px;
+        border: 1px solid black;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+    }
+    
+    .stu-data {
+        background-image: linear-gradient(to right, rgb(94, 216, 94), rgb(87, 224, 255));
+        border-radius: 15px;
+        width: fit-content;
+    }
+</style>
+
+
+
+
+<br><br><br><br> {% endblock %}

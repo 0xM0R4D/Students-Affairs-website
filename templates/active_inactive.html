@@ -1,0 +1,63 @@
+ {% extends 'main.html' %} {%load static%} {% block content %}
+<div name="ali" id="ali_1" class="ali">
+    <center>
+        <table class="table" id="table">
+            <caption> Statue Table </caption>
+            <colgroup colspan="1" class="colgroup1"> </colgroup>
+
+
+            <thead>
+                <tr>
+                    <td> Active </td>
+                    <td> notActive </td>
+                </tr>
+                <thead>
+
+                    <tbody>
+                        <tr>
+                            <!--active-->
+                            <td>
+                                {%for i in student%} {%if i.isActive%}
+                                <!----------->
+                                <!--active-->
+                                <div id="new">
+                                    name: {{i.stu_name}}
+                                    <br> id: {{i.stu_id}}
+                                    <br> department: {{i.stu_dep}}
+                                    <br> GPA: {{i.GPA}}
+                                    <br> level: {{i.level}}
+                                    <hr>
+                                </div>
+
+                                <!----------->
+                                {%endif%} {%endfor%}
+                            </td>
+                            <!--not active-->
+                            <td>
+                                {%for i in student%} {%if not i.isActive%}
+                                <div>
+                                    name: {{i.stu_name}}
+                                    <br> id:{{i.stu_id}}
+                                    <br> department:{{i.stu_dep}}
+                                    <hr>
+                                </div>
+                                {%endif%} {%endfor%}
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                    <div class="" id="i">
+
+                    </div>
+
+
+        </table>
+    </center>
+</div>
+
+<script>
+</script>
+
+
+{% endblock %}

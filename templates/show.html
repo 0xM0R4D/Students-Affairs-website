@@ -1,0 +1,94 @@
+{% extends 'main.html' %} {%load static%} {% block content %}
+<div class="count">
+    <p>{{searched}} rsults of {{total}}</p>
+</div>
+
+<br><br><br>
+<div class="wide">
+    {%for i in stus%}
+    <div class="parent" max-width="300px">
+        <p>{{i.stu_name}}</p>
+        <p>{{i.stu_id}}</p>
+        <p>Level: {{i.level}}</p>
+        <p style="color:gray;">{{i.stu_dep}}</p>
+        <a href="{%url 'edit' stu_id=i.stu_id%}" class="edit">Edit</a>
+        <a href="{%url 'delete' stu_id=i.stu_id%}" class="delete">delete</a>
+        <br> <br>
+        <h4>courses</h4>
+        <hr>
+        <div class="courses"> {%for j in stu_courses%} {%if j.stuID == i.stu_id%}
+            <a class="course_link" href="{%url 'onecourse' course_name=j.courseNAME%}">{{j.courseNAME}}</a> {%endif%} {%endfor%}
+        </div>
+    </div>
+    {%endfor%}
+</div>
+
+
+
+
+<style>
+    .wide {
+        background-color: #ececec;
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        padding: 15px;
+        margin: -10px -10px 0 -10px;
+        perspective: 300px;
+        flex-wrap: wrap;
+    }
+    
+    .parent {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        min-width: 10rem;
+        max-width: 15rem;
+    }
+    
+    .parent:hover {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        outline: 2px solid black;
+    }
+    
+    .edit {
+        padding: 5px;
+        border: 1px solid #ddd;
+        background-color: greenyellow;
+        color: white;
+    }
+    
+    .delete {
+        padding: 5px;
+        border: 1px solid #ddd;
+        background-color: rgb(87, 224, 255);
+        color: white;
+    }
+    
+    .course_link {
+        padding: 3px;
+        border: 1px solid black;
+        color: black;
+    }
+    
+    .count {
+        width: 10rem;
+        padding: 20px;
+        text-align: center;
+        background-image: linear-gradient(to right, rgb(94, 216, 94), rgb(87, 224, 255));
+        color: white;
+        margin: 10px auto 0 auto;
+        border-radius: 50px;
+    }
+    
+    .courses {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+</style>
+
+
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends 'main.html' %} {%load static%} {% block content %}
+<link rel="stylesheet" href="{%static 'css/addcss.css'%}" scoped>
+<h1>ADD New Student</h1>
+<div class="Container">
+    <form action="" method="post">
+        {% csrf_token %} {{form}}
+        <button type="submit">Save</button>
+
+    </form>
+</div>
+<br>
+<h1>ADD New Course</h1>
+<form action="" method="post">
+    {% csrf_token %} {{formII}}
+    <br> <br>
+    <button type="submit">Save</button>
+</form>
+<br>
+<br>
+<h1>ADD New Course To A Student</h1>
+<form action="" method="post">
+    {% csrf_token %} {{formIII}}
+    <br> <br>
+    <button type="submit">Save</button>
+</form>
+<br>
+<!---->
+{% block javascript %}
+<script>
+    $("#id_stu_name").change(function() {
+        var stu_name = $(this).val();
+        $.ajax({
+            url: 'validate_studentid/',
+            data: {
+                'stu_name': stu_name,
+            },
+            dataType: JSON,
+            success: function(data) {
+                if (data.is_exist) {
+                    alert("id is already taken");
+                } else {
+                    alert("is not exist");
+                }
+            }
+        });
+    })
+</script>
+{% endblock %} {% endblock %}

@@ -1,0 +1,145 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+:root {
+    --main-color: #192bd1;
+    --main-alt-color: #d1ecf1;
+    --warning-color: #f8d7da;
+}
+
+.container-fluid {
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin: -8px -8px 0 -8px;
+    align-items: center;
+    padding: 15px;
+}
+
+.container-fluid div a {
+    color: white;
+    text-decoration: none;
+    height: 100%;
+}
+
+.container-fluid .links {
+    display: flex;
+    gap: 20px;
+}
+
+.container-fluid .links a {
+    display: flex;
+    gap: 20px;
+    position: relative;
+}
+
+.container-fluid .links a:hover {
+    opacity: 0.5;
+}
+
+
+/*###############*/
+
+footer {
+    background-color: var(--main-alt-color);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 -7px -7px -7px;
+}
+
+.main-title {
+    width: fit-content;
+    margin: 2rem auto 0 auto;
+    text-align: center;
+    position: relative;
+}
+
+.main-title::before {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    background-color: black;
+    content: "";
+    transition-duration: 0.3s;
+    width: 0;
+}
+
+.main-title:hover::before {
+    transition-duration: 0.5s;
+    width: 40%;
+}
+
+
+/**/
+
+.container {
+    margin: 0 auto 0 auto;
+    background-color: var(--main-alt-color);
+    padding: 15px;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 30px -8px 0 -8px;
+}
+
+.box {
+    max-width: 18rem;
+    border-right: 1px solid gray;
+    border-left: 1px solid gray;
+    border-bottom: 1px solid gray;
+    border-radius: 20px;
+}
+
+.box .box-image img {
+    max-width: 100%;
+}
+
+.box .descripe {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.box .descripe p {
+    color: gray;
+}
+
+.box .descripe a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: gray;
+    color: white;
+    border-radius: 6px;
+}
+
+.box .descripe a:hover {
+    background-color: #bfbdbd;
+}
+
+
+/*##########*/
+
+.search-box {
+    display: flex;
+    gap: 400px;
+    margin-top: 60px;
+}
+
+.stu-data {
+    background-color: gray;
+    color: white;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+.stu-data p {
+    padding: 15px;
+    border-radius: 15px;
+    max-width: 25rem;
+    border: 1px solid black;
+}

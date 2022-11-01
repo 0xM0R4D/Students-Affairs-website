@@ -1,0 +1,25 @@
+{% extends 'main.html' %} {%load static%} {% block content %}
+<h1>the students in {{i.courseNAME}} course {{stu_num}}</h1>
+{%for i in course_infos%}
+<div class="ids">
+
+    <p class="id">
+        {{i.stuID}}
+    </p>
+
+</div>
+<style>
+    .ids {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    
+    .id {
+        padding: 15px;
+        background-color: gray;
+        color: black;
+    }
+</style>
+
+{% endfor %} {% endblock %}

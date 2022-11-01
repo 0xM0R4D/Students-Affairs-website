@@ -1,0 +1,42 @@
+{% extends 'main.html' %} {%load static%} {% block content %}
+
+
+
+<div class="error">
+    <p class="e">Error</p>
+
+    <p>you have choose a wrong "level"</p>
+
+    <p class="explain">
+        you have only 4 levels
+    </p>
+</div>
+
+
+
+<style>
+    .e {
+        color: white;
+        font-size: 60px;
+        font-weight: 600;
+    }
+    
+    .error {
+        background-color: rgb(227, 73, 73);
+        padding: 30px;
+        color: #f8d7da;
+        font-size: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .explain {
+        color: white;
+        font-size: 25px;
+    }
+</style>
+
+
+
+
+
+{% endblock %}

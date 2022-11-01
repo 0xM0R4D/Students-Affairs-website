@@ -1,0 +1,84 @@
+body {
+    background-color: #3d8afd81;
+}
+
+.firstLine {
+    font-size: 30px;
+}
+
+form {
+    margin-left: 100px;
+    margin-top: 100px;
+}
+
+select[name=Depart] {
+    border: 2px solid;
+}
+
+.nameDiv {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    font-size: 25px;
+}
+
+.IDDiv {
+    padding-bottom: 25px;
+    padding-left: 10px;
+    font-size: 25px;
+}
+
+.departDiv {
+    padding-left: 15px;
+    font-size: 25px;
+}
+
+select {
+    width: 70px;
+}
+
+#searchRes {
+    margin-left: 120px;
+    margin-top: 70px;
+    font-size: 25px;
+}
+
+.IDDiv input[type="text"] {
+    margin-left: 33px;
+    border: 2px solid;
+}
+
+.nameDiv input[type="text"] {
+    border: 2px solid;
+}
+
+fieldset {
+    border: black solid 3px;
+    width: 800px;
+    height: 290px;
+}
+
+legend {
+    font-size: 40px;
+}
+
+
+/* styles for buttons */
+
+#searchBtn {
+    border: 2px solid;
+    margin-left: 10px;
+    margin-top: 50px;
+    width: 80px;
+    height: 30px;
+    font-size: 16px;
+}
+
+#EditLink {
+    visibility: hidden;
+    padding: 15px;
+    background-color: #ececec;
+    color: gray;
+    text-decoration: none;
+    border-radius: 10px;
+}
