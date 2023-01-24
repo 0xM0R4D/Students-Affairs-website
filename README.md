@@ -1,6 +1,6 @@
 # Students-Affairs-website
 
-This website designed to used by administrator of college.
+This website designed to used by administrators of college.
 
 website hase the following features: 
 
